@@ -1,0 +1,22 @@
+<div class="row">
+  <%= form_with(model: @course, class: "col s12") do |f| %>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :short_name, id: "first_name", placeholder: "Course short name", class: "validate" %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.text_field :name, id: "last_name", placeholder: "Course full name", class: "validates" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_field :description, id: "email", placeholder: "Course Description", class: "validate" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <%= f.submit(@course.new_record? ? "Create" : "Edit", class: "waves-effect waves-light btn") %>
+      </div>
+    </div>
+  <% end %>
+</div>

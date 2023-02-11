@@ -1,0 +1,22 @@
+<nav>
+  <div class="container">
+    <div class="nav-wrapper">
+      <%= link_to "SC-Project", root_path, class: "brand-logo" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "Students", students_path %></li>
+        <li><%= link_to "My Courses", courses_path %></li>
+        <% if current_student %>
+          <li><%= link_to "Create Course", new_course_path %></li>
+          <li><%= link_to "Logout", logout_path %></li>
+          <li><%= current_student.name %></li>
+        <% else %>
+          <li><%= link_to "Login", login_path %></li>
+          <li><%= link_to "Register", new_student_path %></li>
+        <% end %>
+<!--        <li><a href="sass.html">Sass</a></li>-->
+<!--        <li><a href="badges.html">Components</a></li>-->
+<!--        <li><a href="collapsible.html">JavaScript</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>

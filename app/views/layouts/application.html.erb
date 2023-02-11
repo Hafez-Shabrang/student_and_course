@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="header">
+      <%= render "layouts/navigation" %>
+    </div>
+    <div class="main">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+<!--    <div class="footer">-->
+      <%#= render "layouts/footer" %>
+<!--    </div>-->
+  </body>
+</html>

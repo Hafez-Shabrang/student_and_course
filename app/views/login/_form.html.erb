@@ -1,0 +1,22 @@
+<div class="row">
+  <%= form_with(scope: :session, class: "col s12") do |f| %>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :name, id: "first_name", placeholder: "Name", class: "validate" %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.email_field :email, id: "email", placeholder: "Email", class: "validates" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.password_field :password, id: "password", placeholder: "Password", class: "validate" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <%= f.submit "Login", class: "waves-effect waves-light btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>

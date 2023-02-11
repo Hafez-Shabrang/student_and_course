@@ -1,0 +1,17 @@
+<div class="row">
+  <% @students.each do |student| %>
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"><%= student.name %></span>
+          <p><%= student.email %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to "View", student_path(student) %>
+          <%= link_to "Edit", edit_student_path(student) %>
+          <%= link_to "Delete", student_path(student), method: :delete %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
